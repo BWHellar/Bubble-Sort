@@ -8,6 +8,7 @@
 var array ["day", "cat", "ant", "aant", "aaant"];
 // We need to declare an empty variable for our swap later down the line.
 var empty;
+var min;
 // This is our selection sort function.
 function sort(array){
   // This outer loop controls how many passes over the array we perform.  It goes down the array length and checks every word. and continually selects the next smallest in the array.
