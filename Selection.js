@@ -38,16 +38,16 @@ function sort(array){
       // find that for the second letter that "b" is larger than our "a"
       // which was already found to be that minimum. so we will need to
       // swap them around.
-      if(array[i]<array[j] && i!=j){
+      if(array[j]<array[min] && i!=j){
         // For whichever letter we are at if something new is found it
         //is logged as the new minimum as the prior ones are already set.
         var min = j;
         // And put it into the temporary variable we have set up.
-        temp = array[j];
+        temp = array[i];
         // Then it will swap positions with the other word.
-        array[j] = array[i];
+        array[i] = array[min];
         // Then we are
-        array[i] = temp;
+        array[min] = temp;
       }
     }
   }
@@ -77,11 +77,11 @@ function sort(array){
   for(var i = 0; i<array.length; i++){
     var min = i;
     for(var j = 0; j<array.length; j++){
-      if(array[i]<array[j] && i!=j){
+      if(array[j]<array[min] && i!=j){
         var min = j;
-        temp = array[j];
-        array[j] = array[i];
-        array[i] = temp;
+        temp = array[i];
+        array[i] = array[min];
+        array[min] = temp;
       }
     }
   }
